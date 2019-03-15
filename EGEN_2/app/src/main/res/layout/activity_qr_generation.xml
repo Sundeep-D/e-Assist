@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QR_generation">
+
+
+
+    <TextView
+        android:id="@+id/dashboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/subcolor"
+        />
+    <android.support.v7.widget.CardView
+        android:id="@+id/QR_CV"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:transitionName="button_transition"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardMaxElevation="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/life_saver_QR_textview"
+        android:layout_marginTop="50dp"
+        android:elevation="8dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        card_view:cardElevation="10dp"
+        card_view:cardPreventCornerOverlap="false">
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/qr_load_progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            card_view:indicatorColor="#000"
+            app:indicatorName="LineScaleIndicator"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            />
+
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/qr_generation_image_view"/>
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/life_saver_QR_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life Saver QR"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:textSize="38sp"
+        android:layout_marginTop="50dp"
+        android:onClick="sendmail"
+        android:transitionName="dashboard_transition"/>
+
+    <ScrollView
+        android:layout_below="@id/QR_CV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="70dp"
+                android:src="@drawable/done"/>
+
+            <TextView
+                android:id="@+id/register_successfully_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration Successful"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/saved_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qr_save_location"
+                android:textColor="#cec9c9"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/whatsnext_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What's next?"
+                android:textColor="#5256be"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:onClick="whats_next_onclick"/>
+
+            <TextView
+                android:id="@+id/back_to_dashboard_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Dashboard"
+                android:textColor="#5256be"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:onClick="back_to_dashboard_onclick"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

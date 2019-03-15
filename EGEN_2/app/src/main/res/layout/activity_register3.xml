@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register3"
+    >
+
+
+    <TextView
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/subcolor"
+        />
+    <TextView
+        android:id="@+id/register_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:textSize="38sp"
+        android:layout_marginTop="20dp"
+        android:transitionName="dashboard_transition"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/register_textview"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:transitionName="cardview_transition"
+                android:id="@+id/root_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardMaxElevation="18dp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:background="#efeded"
+                android:focusableInTouchMode="true"
+               >
+
+
+                <SurfaceView
+                    android:id="@+id/surface_view_of_adhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_of_adhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    >
+
+                    <TextView
+                        android:id="@+id/please_fit_instruction_AADHAAR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:text="Please fit the 12 digit number in the area"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        android:onClick="close_aadhaar_scan_engine"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="["
+                        android:layout_marginLeft="30dp"
+                        android:textSize="70sp"
+                        android:textColor="#cec9c9"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/retrieved_adhar_number_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:maxLines="1"
+                        android:maxWidth="220dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/restart_adhaar_scan_engine"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:src="@drawable/logo"-->
+                        <!--android:layout_alignParentBottom="true"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/close_adhaar_scan_engine"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_toEndOf="@id/restart_adhaar_scan_engine"-->
+                        <!--android:src="@drawable/logo" />-->
+
+                    <TextView
+                        android:id="@+id/close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="]"
+                        android:textColor="#cec9c9"
+                        android:textSize="70sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/linear_layout_of_aadhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/unique_identification_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unique Identification"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20sp"
+                            android:textColor="#cec9c9"
+                            android:layout_marginTop="10dp"/>
+
+                        <cdflynn.android.library.checkview.CheckView
+                            android:id="@+id/verified_animation_aadhaar"
+                            android:layout_width="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_height="25dp" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+
+                        android:weightSum="3.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/aadhaar_two"/>
+
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/aadhaar_heading_TV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textColor="#000"
+                                android:paddingLeft="5dp"
+                                android:text="Aadhaar Number"/>
+
+                            <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--app:mtf_labelColor="#000"-->
+                                <!--app:mtf_image="@drawable/user"-->
+                                <!--&gt;-->
+
+                                <EditText
+
+                                    android:id="@+id/aadhaar_number_ED"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter manually"
+                                    android:inputType="number"
+                                    android:textColor="#000"
+                                    android:textSize="16sp"
+                                    android:layout_marginTop="20dp"
+
+                                    />
+
+                            <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="30dp"
+                            android:src="@drawable/scan"
+                            android:onClick="open_aadhaar_scan_engine"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>  //aadhaar
+
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:transitionName="cardview_transition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardMaxElevation="18dp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:background="#efeded"
+                android:focusableInTouchMode="true"
+                >
+
+
+                <SurfaceView
+                    android:id="@+id/surface_view_of_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_of_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    >
+
+                    <TextView
+                        android:id="@+id/please_fit_instruction_LICENSE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:text="Please fit the 15 digit number in the area"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        android:onClick="close_license_scan_engine"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="["
+                        android:layout_marginLeft="30dp"
+                        android:textSize="70sp"
+                        android:textColor="#cec9c9"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/retrieved_license_number_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:maxLines="1"
+                        android:maxWidth="220dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/restart_adhaar_scan_engine"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@drawable/logo"-->
+                    <!--android:layout_alignParentBottom="true"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/close_adhaar_scan_engine"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_toEndOf="@id/restart_adhaar_scan_engine"-->
+                    <!--android:src="@drawable/logo" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="]"
+                        android:textColor="#cec9c9"
+                        android:textSize="70sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/linear_layout_of_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/license_unique_identification_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unique Identification"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20sp"
+                            android:textColor="#cec9c9"
+                            android:layout_marginTop="10dp"/>
+
+                        <cdflynn.android.library.checkview.CheckView
+                            android:id="@+id/verified_animation_license"
+                            android:layout_width="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_height="25dp" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+
+                        android:weightSum="3.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/license_two"/>
+
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/license_heading_TV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textColor="#000"
+                                android:paddingLeft="5dp"
+                                android:text="Driving Licence" />
+
+                            <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--app:mtf_labelColor="#000"-->
+                            <!--app:mtf_image="@drawable/user"-->
+                            <!--&gt;-->
+
+                            <EditText
+
+                                android:id="@+id/license_number_ED"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter manually"
+                                android:inputType="textPhonetic"
+                                android:textColor="#000"
+                                android:textSize="16sp"
+                                android:layout_marginTop="20dp"
+                                />
+
+                            <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="30dp"
+                            android:src="@drawable/scan"
+                            android:onClick="open_license_scan_engine"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>  //license
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:transitionName="cardview_transition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardMaxElevation="18dp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:background="#efeded"
+                android:focusableInTouchMode="true"
+                >
+
+
+                <SurfaceView
+                    android:id="@+id/surface_view_of_organisationID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_of_organisationID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    >
+
+                    <TextView
+                        android:id="@+id/please_fit_instruction_organisationID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:text="Please fit the ID number in the area"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        android:onClick="close_license_scan_engine"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="["
+                        android:layout_marginLeft="30dp"
+                        android:textSize="70sp"
+                        android:textColor="#cec9c9"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/retrieved_organisationID_number_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:maxLines="1"
+                        android:maxWidth="220dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/restart_adhaar_scan_engine"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@drawable/logo"-->
+                    <!--android:layout_alignParentBottom="true"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/close_adhaar_scan_engine"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_toEndOf="@id/restart_adhaar_scan_engine"-->
+                    <!--android:src="@drawable/logo" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="]"
+                        android:textColor="#cec9c9"
+                        android:textSize="70sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/linear_layout_of_organisationID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/organisationID_unique_identification_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unique Identification"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20sp"
+                            android:textColor="#cec9c9"
+                            android:layout_marginTop="10dp"/>
+
+                        <cdflynn.android.library.checkview.CheckView
+                            android:id="@+id/verified_animation_organisationID"
+                            android:layout_width="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_height="25dp" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+
+                        android:weightSum="3.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/id_card"/>
+
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/organisationID_heading_TV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:textColor="#000"
+                                android:paddingLeft="5dp"
+                                android:text="Any organisation ID" />
+
+                            <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--app:mtf_labelColor="#000"-->
+                            <!--app:mtf_image="@drawable/user"-->
+                            <!--&gt;-->
+
+                            <EditText
+
+                                android:id="@+id/organisationID_number_ED"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter manually"
+                                android:inputType="textPhonetic"
+                                android:textColor="#000"
+                                android:textSize="16sp"
+                                android:layout_marginTop="20dp"
+                                />
+
+                            <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="30dp"
+                            android:src="@drawable/scan"
+                            android:onClick="open_organisationID_scan_engine"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/verify_button"
+                android:transitionName="button_transition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/subcolor"
+                android:layout_gravity="center_horizontal"
+                android:text="FINISH"
+                android:textStyle="normal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="finish_registration"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

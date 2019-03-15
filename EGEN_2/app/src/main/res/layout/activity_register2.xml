@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/regiter_2_root_layout"
+    tools:context=".Register2">
+
+
+    <TextView
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/subcolor"
+        />
+    <TextView
+        android:id="@+id/register_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:textSize="38sp"
+        android:layout_marginTop="20dp"
+        android:transitionName="dashboard_transition"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/register_textview"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardMaxElevation="18dp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:background="#efeded"
+                android:focusableInTouchMode="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Medical_details_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medical Details"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:textColor="#cec9c9"
+                        android:layout_marginTop="10dp"/>
+
+
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/Blood_group_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="30dp"
+                        app:ms_text_color="#000"
+                        app:ms_padding_top="10dp"
+                        app:ms_padding_bottom="10dp"
+                        app:ms_padding_right="10dp"
+                        android:textSize="16sp"
+
+
+                        />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/BMI_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="30dp"
+                        app:ms_text_color="#000"
+                        app:ms_padding_top="10dp"
+                        app:ms_padding_bottom="10dp"
+                        app:ms_padding_right="10dp"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/Do_you_have_Sinus_Infection_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Do you have Sinus Infection?"
+                        android:layout_marginTop="30dp"
+                        android:textSize="16sp"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#cec9c9"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/sinus_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
+                        app:ms_text_color="#000"
+                        app:ms_padding_top="10dp"
+                        app:ms_padding_bottom="10dp"
+                        app:ms_padding_right="10dp"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/Do_you_have_Diabetes_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Do you have Diabetes Mellitus?"
+                        android:layout_marginTop="30dp"
+                        android:textSize="16sp"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#cec9c9"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/Diabetes_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
+                        app:ms_text_color="#000"
+                        app:ms_padding_top="10dp"
+                        app:ms_padding_bottom="10dp"
+                        app:ms_padding_right="10dp"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/why_medical_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Why?"
+                        android:textSize="16sp"
+                        android:layout_gravity="end"
+                        android:layout_margin="10dp"
+                        android:textColor="#7f78a9"/>
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:transitionName="cardview_transition"
+                android:id="@+id/root_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardMaxElevation="18dp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:background="#efeded"
+                android:focusableInTouchMode="true">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Emergency_contacts_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contacts"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#cec9c9"
+                    android:layout_marginTop="10dp"/>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="30dp"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:id="@+id/add_contact1_name_TV"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Add contact 1"
+                         android:paddingEnd="10dp"
+                         android:textSize="16sp"
+                         android:paddingStart="22dp"
+                         android:paddingTop="8dp"
+                         android:onClick="pickContact1"
+                         android:textColor="#000"/>
+
+                     <ImageView
+                         android:id="@+id/add_contact1_IV"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_marginLeft="20dp"
+                         android:src="@drawable/add_contact"
+                         android:onClick="pickContact1"/>
+
+
+
+                 </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/add_contact1_number_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:textAlignment="center"
+                        android:paddingStart="22dp"
+                        android:textColor="#cec9c9"
+                        android:onClick="pickContact1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/add_contact2_name_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add contact 2"
+                            android:textSize="16sp"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="8dp"
+                            android:onClick="pickContact2"
+                            android:textColor="#000"/>
+
+                        <ImageView
+                            android:id="@+id/add_contact2_IV"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="20dp"
+                            android:onClick="pickContact2"
+                            android:src="@drawable/add_contact"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/add_contact2_number_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:textAlignment="center"
+                        android:paddingStart="22dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="#cec9c9"
+                        android:onClick="pickContact2"/>
+                    <TextView
+                        android:id="@+id/why_emergency_contact_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Why?"
+                        android:textSize="16sp"
+                        android:layout_gravity="end"
+                        android:layout_margin="10dp"
+                        android:textColor="#7f78a9"/>
+
+                 </LinearLayout>
+
+
+
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <Button
+                android:id="@+id/verify_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/subcolor"
+                android:layout_gravity="center_horizontal"
+                android:text="VERIFY"
+                android:textStyle="normal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="take_me_to_registration_page_3"
+                android:textColor="#fff"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

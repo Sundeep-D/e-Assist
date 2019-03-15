@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/welcome_root_layout"
+    tools:context=".Welcome">
+    <LinearLayout
+        android:id="@+id/welcome_Linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:background="@color/subcolor"
+
+        android:paddingTop="30dp"
+        >
+        <TextView
+            android:id="@+id/switch_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch account"
+            android:textSize="10sp"
+            android:textColor="#bdb4cf"
+            android:layout_gravity="start"
+            android:layout_marginTop="-10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="switch_account"/>
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dashboard_transition"
+            android:text="Welcome"
+            android:textSize="45sp"
+            android:textColor="#FFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:transitionName="username_transition"
+            android:textSize="25sp"
+            android:textColor="#FFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/term_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:layout_below="@id/welcome_Linear_layout"
+        android:textColor="#000"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"/>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/term_conditions"
+        android:layout_margin="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_and_conditions"
+                android:textColor="#000"/>
+            <com.dd.morphingbutton.MorphingButton
+            android:id="@+id/accept_and_continue"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="   Accept and Continue   "
+            android:background="@color/subcolor"
+            android:textColor="#fff"
+            android:foregroundTint="@color/subcolor"
+            android:layout_gravity="center_horizontal"
+            android:onClick="accept_and_continue"
+                android:layout_marginTop="20dp"
+            />
+
+        </LinearLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/conditions"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/terms_and_conditions"-->
+            <!--android:textColor="#000"/>-->
+        <!--<com.dd.morphingbutton.MorphingButton-->
+            <!--android:id="@+id/accept_and_continue"-->
+            <!--android:layout_width="350dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="   Accept and Continue   "-->
+            <!--android:background="@color/subcolor"-->
+            <!--android:textColor="#fff"-->
+            <!--android:foregroundTint="@color/subcolor"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:onClick="accept_and_continue"-->
+            <!--/>-->
+
+    </ScrollView>
+
+    <!--<com.dd.morphingbutton.MorphingButton-->
+        <!--android:id="@+id/accept_and_continue"-->
+        <!--android:layout_width="350dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/scroll_view"-->
+        <!--android:text="   Accept and Continue   "-->
+        <!--android:background="@color/subcolor"-->
+        <!--android:textColor="#fff"-->
+        <!--android:foregroundTint="@color/subcolor"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:onClick="accept_and_continue"-->
+        <!--/>-->
+
+
+
+</RelativeLayout>

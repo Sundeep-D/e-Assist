@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Register_rootLayout_Relative"
+    tools:context=".Register">
+
+
+    <TextView
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/subcolor"
+        />
+    <TextView
+        android:id="@+id/register_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:textSize="38sp"
+        android:layout_marginTop="20dp"
+        android:transitionName="dashboard_transition"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/identification_details_TV"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Identification Details"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textColor="#FFF"-->
+        <!--android:layout_below="@id/register_textview"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp"/>-->
+
+    <!--<com.wang.avi.AVLoadingIndicatorView-->
+        <!--android:id="@+id/user_image_load_progress"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--app:indicatorName="LineScaleIndicator"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--/>-->
+
+
+
+
+
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register_layout"
+        android:layout_marginTop="5dp"
+        app:pulse_count="4"
+        app:pulse_duration="4000"
+        app:pulse_repeat="0"
+        app:pulse_color="@color/subcolor"
+        app:pulse_startFromScratch="true"
+        app:pulse_interpolator="Linear">
+
+    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_image_circleImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:civ_border_width="0dp"
+        app:civ_border_color="#FF000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register_layout"
+        android:layout_marginTop="20dp"
+        android:transitionName="userimage_transition"
+        android:onClick="upload_user_image"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_image_circleImage"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardMaxElevation="12dp"
+        android:layout_margin="20dp"
+        android:focusable="true"
+        android:transitionName="cardview_transition"
+        android:background="#efeded"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/identification_details_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identification Details"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="#cec9c9"
+            android:layout_marginTop="10dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/user"
+                    android:onClick="name_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/name_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                       />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/mail"
+                    android:onClick="Mail_ED_onclick"    >
+
+                    <EditText
+                        android:id="@+id/mail_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mail"
+                        android:textColor="#000"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16sp"
+                       />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_mail"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/age"
+                    android:onClick="age_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/age_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Age"
+                        android:textColor="#000"
+                        android:inputType="number"
+                        android:textSize="16sp"
+                       />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_age"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/phone"
+                    android:onClick="phone_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/phone_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                       />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/location"
+                    android:onClick="address_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/address_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textColor="#000"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                       />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_address"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3.5"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_gravity="bottom"
+                    />
+
+                <ImageView
+                    android:id="@+id/male_img_view"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="50dp"
+                    android:src="@drawable/male"
+                    android:onClick="update_user_as_male"
+                    android:layout_marginTop="3dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/female_img_view"
+                    android:layout_width="50dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="52dp"
+                    android:src="@drawable/female"
+                    android:layout_marginTop="2dp"
+                    android:onClick="update_user_as_female"
+                    />
+
+
+
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_gender"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/location"
+                    android:onClick="locality_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/locality_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Locality"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_locality"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/location"
+                    android:onClick="district_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/district_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="District/Area"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_district"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/location"
+                    android:onClick="state_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/state_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_state"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/location"
+                    android:onClick="country_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/Country_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Country"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_country"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    app:mtf_labelColor="#000"
+                    app:mtf_image="@drawable/postal_code"
+                    android:onClick="pincode_ED_onclick"
+                    >
+
+                    <EditText
+                        android:id="@+id/pincode_ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pincode"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <cdflynn.android.library.checkview.CheckView
+                    android:id="@+id/verified_animation_pincode"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/alert_take_me_to_registration_page_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/subcolor"
+                android:layout_gravity="center_horizontal"
+                android:text="VERIFY"
+                android:textStyle="normal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="take_me_to_registration_page_2"
+                android:textColor="#fff"/>
+
+
+
+        </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </android.support.v7.widget.CardView>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

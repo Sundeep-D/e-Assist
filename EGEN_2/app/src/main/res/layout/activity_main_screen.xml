@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_screen"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:background="#eaeaea"
+    android:id="@+id/mainscreen_root_layout">
+
+    <TextView
+        android:id="@+id/dashboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/subcolor"
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="18dp"
+        android:src="@drawable/menu"/>
+    <TextView
+        android:id="@+id/dashboard_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textColor="#FFF"
+        android:textSize="38sp"
+        android:layout_marginTop="65dp"
+        android:transitionName="dashboard_transition"
+        android:layout_marginLeft="20dp"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="172dp"
+        android:onClick="go_to_RegisterScreen"
+
+        android:text="MainScreen Under Construction" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/user_image_load_progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:indicatorName="LineScaleIndicator"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="36dp"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="26dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/user_image_circleImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:civ_border_width="0dp"
+            app:civ_border_color="#FF000000"
+            android:transitionName="userimage_transition"
+            android:layout_gravity="center_horizontal"
+            android:onClick="userProfile"/>
+
+        <com.lb.auto_fit_textview.AutoResizeTextView
+            android:id="@+id/username_textview"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textColor="#FFF"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:transitionName="username_transition"
+            android:textAlignment="center"
+            android:onClick="userProfile"
+            android:maxLines="2"
+            android:autoSizeMinTextSize="10sp"
+            android:textSize="16sp"
+           />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="217dp"
+        android:onClick="Scan_Qr_at_emergency_situations"
+        android:text="Emergency"
+        android:textColor="@color/red" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#534280"
+        >
+
+
+
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/noti"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"/>
+
+        <com.nex3z.notificationbadge.NotificationBadge
+            android:id="@+id/badge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            app:nbMaxTextLength="2"/>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="invisible"
+        android:layout_above="@id/bottom_nav_bar"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/emergency_note"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-5dp"
+        android:paddingLeft="10dp"
+        android:src="@drawable/emergency_icon"
+        />
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">e-Assist</string>
+    <string name="terms_and_conditions">1.Application can get your name and photo from your Google authentication services
+    \n\n2.Application can track your activity from your Google authentication services.
+    \n\n3.You are supposed to provide your Identity and Medical details.
+    \n\n4.Any person can read your Name,Age group,Gender by scanning your assistance QR.
+    \n\n5.Application also provides your emergency contacts during emergency circumstances by scanning your assistance QR.
+    \n\n6.Application can get your name and photo from your Google authentication services
+    \n\n7.Application can track your activity from your Google authentication services.
+    \n\n8.You are supposed to provide your Identity and Medical details.
+    \n\n9.Any person can read your Name,Age group,Gender by scanning your assistance QR.
+    \n\n10.Application also provides your emergency contacts during emergency circumstances by scanning your assistance QR
+    \n\n11.Application can get your name and photo from your Google authentication services
+    \n\n12.Application can track your activity from your Google authentication services.
+    \n\n13.You are supposed to provide your Identity and Medical details.
+    \n\n14.Any person can read your Name,Age group,Gender by scanning your assistance QR.
+    \n\n15.Application also provides your emergency contacts during emergency circumstances by scanning your assistance QR.
+    \n\n16.Application can get your name and photo from your Google authentication services
+    \n\n17.Application can track your activity from your Google authentication services.
+    \n\n18.You are supposed to provide your Identity and Medical details.
+    \n\n19.Any person can read your Name,Age group,Gender by scanning your assistance QR.
+    \n20.Application also provides your emergency contacts during emergency circumstances by scanning your assistance QR</string>
+
+    <string name="number_picker_formatter">%02d</string>
+    <string name="qr_save_location">QR saved in storage /EGEN/Life Saver QR/QR.jpg
+        \nSent verification mail.</string>
+    <string name="title_activity_nearby__doctors">Map</string>
+    <string name="Gmap_API_KRY">AIzaSyCUf4EwGA8CoM3cLRwVhPs_cSDu_atuttQ</string>
+    //₹21,214.50 credit and 364 days left in your free trial)
+
+</resources>
